@@ -6,3 +6,12 @@ services:
       - 3001:3001
     volumes: 
       - ./:/usr/server-app
+  mongo:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    volumes: 
+      - ./mongo_data:/data/db
+    environment: 
+      MONGO_INIT_DB_ROOT_USERNAME: root
+      MONGO_INIT_DB_ROOT_PASSWORD: supersecureyay
