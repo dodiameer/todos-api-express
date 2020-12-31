@@ -6,6 +6,8 @@ services:
       - 3001:3001
     volumes: 
       - ./:/usr/server-app
+    depends_on: 
+      - mongo
   mongo:
     image: mongo:latest
     ports:
